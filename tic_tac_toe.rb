@@ -4,7 +4,7 @@ class TicTacToe
   end
 
   def winner
-
+    
     is_draw = false
 
     # Step one check for wins in a row for the board
@@ -12,21 +12,21 @@ class TicTacToe
     if check_rows != nil
       return check_rows
     else
-      is_draw = true
+      is_draw = is_finished?
     end
 
     # column checks
     if check_columns != nil
       return check_columns
     else
-      is_draw = true
+      is_draw = is_finished?
     end
 
     # diagonal checks
     if check_diagonals != nil
       return check_diagonals
     else
-      is_draw = true
+      is_draw = is_finished?
     end
 
     # if all win checks are nil then draw is true
@@ -122,6 +122,18 @@ class TicTacToe
     end
 
     diagonal_winner
+  end
+
+  # To use in winner method if there is not a winner to verify if game is unfinished
+  def is_finished?
+    @board.each do |row|
+      row_str = row.join.delete(' ')
+      if row_str.length < @board.size
+        return false
+      end
+    end
+
+    true
   end
 
 end

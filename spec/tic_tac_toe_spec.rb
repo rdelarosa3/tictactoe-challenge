@@ -205,15 +205,15 @@ describe TicTacToe do
   #   end
   # end
 
-  # describe "unfinished" do
-  #   it "returns 'unfinished' when the board not finished yet" do
-  #     board = [
-  #       ["o", "x", "o"],
-  #       ["o", "x", "x"],
-  #       ["x", "o", " "]
-  #     ]
+  describe "unfinished" do
+    it "returns 'unfinished' when the board not finished yet" do
+      board = [
+        ["o", "x", "o"],
+        ["o", "x", "x"],
+        ["x", "o", " "]
+      ]
 
-  #     expect(TicTacToe.new(board).winner).to eq("unfinished")
-  #   end
-  # end
+      expect(TicTacToe.new(board).winner).to eq("unfinished")
+    end
+  end
 end
