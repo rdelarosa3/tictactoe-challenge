@@ -9,7 +9,6 @@ class TicTacToe
     row3 = @board[2]
 
     # row checks
-
     if row1[0] == "o" && row1[1] == "o" && row1[2] == "o"
       return "o"
     end
@@ -35,7 +34,7 @@ class TicTacToe
     end
 
     # column checks
-
+    check_columns
     if row1[0] == "o" && row2[0] == "o" && row3[0] == "o"
       return "o"
     end
@@ -61,7 +60,7 @@ class TicTacToe
     end
 
     # diagonal checks
-
+    check_diagonals
     if row1[0] == "o" && row2[1] == "o" && row3[2] == "o"
       return "o"
     end
