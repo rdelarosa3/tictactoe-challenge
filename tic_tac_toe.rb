@@ -8,7 +8,9 @@ class TicTacToe
     row2 = @board[1]
     row3 = @board[2]
 
+    # Step one check for wins in a row for the board
     # row checks
+    p check_rows
     if row1[0] == "o" && row1[1] == "o" && row1[2] == "o"
       return "o"
     end
@@ -34,7 +36,6 @@ class TicTacToe
     end
 
     # column checks
-    check_columns
     if row1[0] == "o" && row2[0] == "o" && row3[0] == "o"
       return "o"
     end
@@ -60,7 +61,6 @@ class TicTacToe
     end
 
     # diagonal checks
-    check_diagonals
     if row1[0] == "o" && row2[1] == "o" && row3[2] == "o"
       return "o"
     end
@@ -78,5 +78,21 @@ class TicTacToe
     end
 
     return "draw"
+  end
+
+  def check_rows
+    row_winner = nil
+
+    # joins row and checks iteration count of x or o in strings to find winner
+    @board.each do |row|
+      row_str = row.join
+      if row_str.count('x') == @board.size
+        row_winner = 'x'
+      elsif row_str.count('o') == @board.size
+        row_winner = 'o'
+      end
+    end
+
+    row_winner
   end
 end
