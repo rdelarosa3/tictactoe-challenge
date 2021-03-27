@@ -4,88 +4,33 @@ class TicTacToe
   end
 
   def winner
-    row1 = @board[0]
-    row2 = @board[1]
-    row3 = @board[2]
+
+    is_draw = false
 
     # Step one check for wins in a row for the board
     # row checks
     if check_rows != nil
       return check_rows
+    else
+      is_draw = true
     end
-    # if row1[0] == "o" && row1[1] == "o" && row1[2] == "o"
-    #   return "o"
-    # end
-    #
-    # if row2[0] == "o" && row2[1] == "o" && row2[2] == "o"
-    #   return "o"
-    # end
-    #
-    # if row3[0] == "o" && row3[1] == "o" && row3[2] == "o"
-    #   return "o"
-    # end
-    #
-    # if row1[0] == "x" && row1[1] == "x" && row1[2] == "x"
-    #   return "x"
-    # end
-    #
-    # if row2[0] == "x" && row2[1] == "x" && row2[2] == "x"
-    #   return "x"
-    # end
-    #
-    # if row3[0] == "x" && row3[1] == "x" && row3[2] == "x"
-    #   return "x"
-    # end
 
     # column checks
     if check_columns != nil
       return check_columns
+    else
+      is_draw = true
     end
-    # if row1[0] == "o" && row2[0] == "o" && row3[0] == "o"
-    #   return "o"
-    # end
-    #
-    # if row1[1] == "o" && row2[1] == "o" && row3[1] == "o"
-    #   return "o"
-    # end
-    #
-    # if row1[2] == "o" && row2[2] == "o" && row3[2] == "o"
-    #   return "o"
-    # end
-    #
-    # if row1[0] == "x" && row2[0] == "x" && row3[0] == "x"
-    #   return "x"
-    # end
-    #
-    # if row1[1] == "x" && row2[1] == "x" && row3[1] == "x"
-    #   return "x"
-    # end
-    #
-    # if row1[2] == "x" && row2[2] == "x" && row3[2] == "x"
-    #   return "x"
-    # end
 
     # diagonal checks
     if check_diagonals != nil
       return check_diagonals
+    else
+      is_draw = true
     end
-    # if row1[0] == "o" && row2[1] == "o" && row3[2] == "o"
-    #   return "o"
-    # end
-    #
-    # if row1[2] == "o" && row2[1] == "o" && row3[0] == "o"
-    #   return "o"
-    # end
-    #
-    # if row1[0] == "x" && row2[1] == "x" && row3[2] == "x"
-    #   return "x"
-    # end
-    #
-    # if row1[2] == "x" && row2[1] == "x" && row3[0] == "x"
-    #   return "x"
-    # end
 
-    return "draw"
+    # if all win checks are nil then draw is true
+    return is_draw ? "draw" : "unfinished"
   end
 
   # checks for horizontal wins on a scalable board
