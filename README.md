@@ -10,8 +10,8 @@ You have just taken over a project that was rushed out the door by the previous 
 
 ### Your Goals
 
-- Refactor the existing code to prepare it to work with a n x n board
-- Currently the output is "draw", when there is no winner, and the game hasn't finished yet. Change this to say "unfinished" if the game hasn't been finished.
+- [x] Refactor the existing code to prepare it to work with a n x n board
+- [x] Currently the output is "draw", when there is no winner, and the game hasn't finished yet. Change this to say "unfinished" if the game hasn't been finished.
 
 ### Running tests
 
@@ -19,4 +19,8 @@ You have just taken over a project that was rushed out the door by the previous 
 
 ### Notes
 
-- The tests that run against a 5x5 board are in the test file, but commented out. Uncomment once done to see whether they are passing. Once you are confident in your solution, add tests for 7x7 and 9x9 boards as well.
+- [x] The tests that run against a 5x5 board are in the test file, but commented out. Uncomment once done to see whether they are passing. Once you are confident in your solution, add tests for 7x7 and 9x9 boards as well.
+
+## Assumptions
+
+- The code will need to be scalable to accommodate any n x n board.
