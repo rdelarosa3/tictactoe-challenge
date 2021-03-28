@@ -25,4 +25,7 @@ You have just taken over a project that was rushed out the door by the previous 
 
 - The code will need to be scalable to accommodate any n x n board.
 - The challenge is targeting scalability and refactoring of existing code
-- Challenge is not to create a CLI Application 
+- Challenge is not to create a CLI Application
+
+### Branch game-play created for a CLI App 
+- If Assumptions were incorrect using app.rb as main script
