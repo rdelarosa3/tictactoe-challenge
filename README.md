@@ -29,4 +29,4 @@ You have just taken over a project that was rushed out the door by the previous 
 
 ### Branch game-play created and merged to main for a CLI App 
 - If Assumptions were incorrect using app.rb as main gameplay script
-- TicTacToe class used for testing 
+- TicTacToe class used for testing and gameplay winner verification
