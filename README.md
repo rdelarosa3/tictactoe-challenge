@@ -27,5 +27,6 @@ You have just taken over a project that was rushed out the door by the previous 
 - The challenge is targeting scalability and refactoring of existing code
 - Challenge is not to create a CLI Application
 
-### Branch game-play created for a CLI App 
-- If Assumptions were incorrect using app.rb as main script
+### Branch game-play created and merged to main for a CLI App 
+- If Assumptions were incorrect using app.rb as main gameplay script
+- TicTacToe class used for testing 
